@@ -1,0 +1,65 @@
+<!--
+
+    Copyright (C) 2003-2014 eXo Platform SAS.
+
+    This file is part of CMIS Integration for eXo platform.
+
+    CMIS Integration for eXo platform is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 3 of
+    the License, or (at your option) any later version.
+
+    CMIS Integration for eXo platform software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with CMIS Integration for eXo platform; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see <http://www.gnu.org/licenses/>.
+
+-->
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+  <id>cmis-addon-archive</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <dependencySets>
+    <!-- Extension war from ECMS -->
+    <dependencySet>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>org.exoplatform.ecms:ecms-ext-xcmis-extension:war</include>
+      </includes>
+      <scope>provided</scope>
+      <outputFileNameMapping>ecm-xcmis-extension.war</outputFileNameMapping>
+      <useProjectArtifact>false</useProjectArtifact>
+    </dependencySet>
+    <!-- Libraries -->
+    <dependencySet>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>org.xcmis:*:jar</include>
+        <include>org.apache.abdera:*:jar</include>
+        <include>*:ecms-ext-xcmis-*:jar</include>
+        <include>org.apache.ws.commons.axiom:*:jar</include>
+        <include>org.apache.lucene:lucene-queries:jar</include>
+        <include>jaxen:*:jar</include>
+      </includes>
+      <scope>provided</scope>
+      <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+      <useProjectArtifact>false</useProjectArtifact>
+    </dependencySet>
+  </dependencySets>
+  <files>
+    <file>
+      <outputDirectory>/</outputDirectory>
+      <destName>README</destName>
+      <source>${project.basedir}/README.md</source>
+      <lineEnding>windows</lineEnding>
+    </file>
+  </files>
+</assembly>
