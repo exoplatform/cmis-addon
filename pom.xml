@@ -33,6 +33,12 @@
   <version>4.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>CMIS Integration for eXo platform</name>
+  <scm>
+    <connection>scm:git:git://github.com/exo-addons/cmis-addon.git</connection>
+    <developerConnection>scm:git:git@github.com:exo-addons/cmis-addon.git</developerConnection>
+    <url>https://github.com/exo-addons/cmis-addon</url>
+    <tag>HEAD</tag>
+  </scm>  
   <properties>
     <!-- **************************************** -->
     <!-- Jenkins Settings                         -->
