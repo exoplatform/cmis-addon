@@ -26,7 +26,7 @@
   <parent>
     <artifactId>addons-parent-pom</artifactId>
     <groupId>org.exoplatform.addons</groupId>
-    <version>4</version>
+    <version>6</version>
   </parent>
   <groupId>org.exoplatform.addons.cmis</groupId>
   <artifactId>cmis-addon</artifactId>
@@ -34,11 +34,11 @@
   <packaging>pom</packaging>
   <name>CMIS Integration for eXo platform</name>
   <scm>
-    <connection>scm:git:git://github.com/exo-addons/cmis-addon.git</connection>
-    <developerConnection>scm:git:git@github.com:exo-addons/cmis-addon.git</developerConnection>
-    <url>https://github.com/exo-addons/cmis-addon</url>
+    <connection>scm:git:git://github.com/exoplatform/cmis-addon.git</connection>
+    <developerConnection>scm:git:git@github.com:exoplatform/cmis-addon.git</developerConnection>
+    <url>https://github.com/exoplatform/cmis-addon</url>
     <tag>HEAD</tag>
-  </scm>  
+  </scm>
   <properties>
     <!-- **************************************** -->
     <!-- Jenkins Settings                         -->
