@@ -30,9 +30,9 @@
   </parent>
   <groupId>org.exoplatform.addons.cmis</groupId>
   <artifactId>cmis-addon</artifactId>
-  <version>4.3.x-SNAPSHOT</version>
+  <version>4.4.x-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>CMIS Integration for eXo platform</name>
+  <name>eXo Platform - CMIS Integration for eXo platform</name>
   <scm>
     <connection>scm:git:git://github.com/exoplatform/cmis-addon.git</connection>
     <developerConnection>scm:git:git@github.com:exoplatform/cmis-addon.git</developerConnection>
@@ -49,6 +49,7 @@
     <!-- **************************************** -->
     <org.exoplatform.platform.version>4.4.x-SNAPSHOT</org.exoplatform.platform.version>
   </properties>
+
   <dependencyManagement>
     <dependencies>
       <!-- Import versions from platform project FIRST!!! -->
@@ -61,57 +62,13 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  <dependencies>
-    <!-- Extension config from ECMS -->
-    <dependency>
-      <groupId>org.exoplatform.ecms</groupId>
-      <artifactId>ecms-ext-xcmis-config</artifactId>
-      <type>jar</type>
-      <scope>provided</scope>
-    </dependency>
-    <!-- Extension war from ECMS -->
-    <dependency>
-      <groupId>org.exoplatform.ecms</groupId>
-      <artifactId>ecms-ext-xcmis-extension</artifactId>
-      <type>war</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.exoplatform.ecms</groupId>
-      <artifactId>ecms-ext-xcmis-extension</artifactId>
-      <type>pom</type>
-      <scope>provided</scope>
-    </dependency>
-    <!-- This one isn't declared in the ecms-ext-xcmis-extension but is required. See PLF-4844 -->
-    <dependency>
-      <groupId>org.xcmis</groupId>
-      <artifactId>xcmis-restatom</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>package-addon</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/assemblies/cmis-addon-archive.xml</descriptor>
-              </descriptors>
-              <appendAssemblyId>false</appendAssemblyId>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+
+  <modules>
+    <module>sp</module>
+    <module>extension</module>
+    <module>packaging</module>
+  </modules>
+
   <profiles>
     <profile>
       <id>project-repositories</id>

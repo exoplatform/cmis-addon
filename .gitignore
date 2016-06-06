@@ -1,6 +1,31 @@
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.next
 release.properties
-.DS_Store
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+# IntelliJ project files
+*.iml
+*.iws
+*.ipr
+.idea/

@@ -54,12 +54,4 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
   </dependencySets>
-  <files>
-    <file>
-      <outputDirectory>/</outputDirectory>
-      <destName>README</destName>
-      <source>${project.basedir}/README.md</source>
-      <lineEnding>windows</lineEnding>
-    </file>
-  </files>
 </assembly>
