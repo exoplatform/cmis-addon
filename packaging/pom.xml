@@ -34,14 +34,16 @@
   <dependencies>
     <!-- Extension war -->
     <dependency>
-      <groupId>org.exoplatform.ecms</groupId>
+      <groupId>org.exoplatform.addons.cmis</groupId>
       <artifactId>ecms-ext-xcmis-extension</artifactId>
+      <version>${project.version}</version>
       <type>war</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.exoplatform.ecms</groupId>
+      <groupId>org.exoplatform.addons.cmis</groupId>
       <artifactId>ecms-ext-xcmis-extension</artifactId>
+      <version>${project.version}</version>
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
