@@ -47,7 +47,7 @@
     <!-- **************************************** -->
     <!-- Dependencies Versions                    -->
     <!-- **************************************** -->
-    <org.exoplatform.platform.version>4.4.x-SNAPSHOT</org.exoplatform.platform.version>
+    <org.exoplatform.platform.version>4.4.0-RC07</org.exoplatform.platform.version>
   </properties>
 
   <dependencyManagement>
