@@ -131,37 +131,6 @@ public class StorageTest extends BaseTest
          fail("Must remove latest version and all versions with deleteAllVersions == true");
       }
    }
-   
-   public void testDeleteDocumentBeforeLatestVersion() throws Exception
-   {
-      DocumentData document = createDocument(rootFolder, "testDeleteLatestVersionDocument_Document", "cmis:document", null, null);
-      String documentId = document.getObjectId();
-      // CHECKOUT
-      DocumentData pwc = document.checkout();
-      // CHECKIN
-      ContentStream cs =
-         new BaseContentStream("checkin test. content updated".getBytes(), null, new MimeType("text", "plain"));
-      DocumentData checkinDocument = pwc.checkin(true, "my comment", null, cs, null, null);
-      
-      document = (DocumentData)storageA.getObjectById(documentId);
-      
-      try {
-         storageA.deleteObject(document, false);
-         fail("Must not remove before latest version with deleteAllVersions == false");
-      } catch (CmisRuntimeException e) {
-         String expectedMessage = "Unable to delete document version with label '1'. There are Reference property pointed to this Version " +
-                                  "[]:1[http://www.exoplatform.com/jcr/exo/1.0]drives:1[]driveA:1" +
-                                  "[]testDeleteLatestVersionDocument_Document:1[http://www.jcp.org/jcr/1.0]";
-         String actualMessage = e.getMessage().length() > expectedMessage.length() ? e.getMessage().substring(0, expectedMessage.length()) : e.getMessage();
-         assertEquals(expectedMessage, actualMessage);
-      }
-      
-      try {
-         storageA.deleteObject(document, true);
-      } catch (CmisRuntimeException e) {
-         fail("Must remove version and all versions with deleteAllVersions == true");
-      }
-   }
             
    public void testApplyACL() throws Exception
    {
