@@ -35,11 +35,10 @@
                             <property name="root-nodetype" value="nt:unstructured" />
                         </properties>
                     </initializer>
-                    <cache enabled="true"
-                           class="org.exoplatform.services.jcr.impl.dataflow.persistent.infinispan.ISPNCacheWorkspaceStorageCache">
+                    <cache enabled="true">
                         <properties>
-                            <property name="infinispan-configuration"
-                                      value="conf/exo.portal.component.test.jcr-infinispan-config.xml" />
+                            <property name="max-size" value="20000"/>
+                            <property name="live-time" value="30000"/>
                         </properties>
                     </cache>
                     <query-handler
@@ -60,7 +59,7 @@
                             <property name="infinispan-cl-cache.jdbc.data.column" value="data" />
                             <property name="infinispan-cl-cache.jdbc.timestamp.column" value="timestamp" />
                             <property name="infinispan-configuration"
-                                      value="conf/exo.portal.component.test.jcr-infinispan-lock.xml" />
+                                      value="conf/standalone/jcr/infinispan/jcr-infinispan-lock.xml" />
                         </properties>
                     </lock-manager>
                 </workspace>
@@ -95,11 +94,10 @@
                             <property name="root-nodetype" value="nt:unstructured" />
                         </properties>
                     </initializer>
-                    <cache enabled="true"
-                           class="org.exoplatform.services.jcr.impl.dataflow.persistent.infinispan.ISPNCacheWorkspaceStorageCache">
+                    <cache enabled="true">
                         <properties>
-                            <property name="infinispan-configuration"
-                                      value="conf/exo.portal.component.test.jcr-infinispan-config.xml" />
+                            <property name="max-size" value="20000"/>
+                            <property name="live-time" value="30000"/>
                         </properties>
                     </cache>
                     <query-handler
@@ -120,7 +118,7 @@
                             <property name="infinispan-cl-cache.jdbc.data.column" value="data" />
                             <property name="infinispan-cl-cache.jdbc.timestamp.column" value="timestamp" />
                             <property name="infinispan-configuration"
-                                      value="conf/exo.portal.component.test.jcr-infinispan-lock.xml" />
+                                      value="conf/standalone/jcr/infinispan/jcr-infinispan-lock.xml" />
                         </properties>
                     </lock-manager>
                 </workspace>
