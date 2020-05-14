@@ -47,7 +47,7 @@
     <!-- **************************************** -->
     <!-- Dependencies Versions                    -->
     <!-- **************************************** -->
-    <org.exoplatform.ecms.version>6.0.x-SNAPSHOT</org.exoplatform.ecms.version>
+    <org.exoplatform.ecms.version>6.0.0-M32</org.exoplatform.ecms.version>
   </properties>
 
   <dependencyManagement>
