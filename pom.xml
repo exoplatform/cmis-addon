@@ -47,7 +47,7 @@
     <!-- **************************************** -->
     <!-- Dependencies Versions                    -->
     <!-- **************************************** -->
-    <addon.exo.ecms.version>6.1.x-SNAPSHOT</addon.exo.ecms.version>
+    <addon.exo.ecms.version>6.1.3-RC01</addon.exo.ecms.version>
   </properties>
 
   <dependencyManagement>
