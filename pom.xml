@@ -30,14 +30,14 @@
   </parent>
   <groupId>org.exoplatform.addons.cmis</groupId>
   <artifactId>cmis-addon</artifactId>
-  <version>6.2.x-SNAPSHOT</version>
+  <version>6.2.0-20210708</version>
   <packaging>pom</packaging>
   <name>eXo Add-on:: eXo Platform - CMIS Integration for eXo platform</name>
   <scm>
     <connection>scm:git:git://github.com/exoplatform/cmis-addon.git</connection>
     <developerConnection>scm:git:git@github.com:exoplatform/cmis-addon.git</developerConnection>
     <url>https://github.com/exoplatform/cmis-addon</url>
-    <tag>HEAD</tag>
+    <tag>6.2.0-20210708</tag>
   </scm>
   <properties>
     <!-- **************************************** -->
