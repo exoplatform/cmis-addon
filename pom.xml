@@ -30,7 +30,7 @@
   </parent>
   <groupId>org.exoplatform.addons.cmis</groupId>
   <artifactId>cmis-addon</artifactId>
-  <version>6.2.x-SNAPSHOT</version>
+  <version>6.3.x-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Add-on:: eXo Platform - CMIS Integration for eXo platform</name>
   <scm>
@@ -47,7 +47,7 @@
     <!-- **************************************** -->
     <!-- Dependencies Versions                    -->
     <!-- **************************************** -->
-    <addon.exo.ecms.version>6.2.x-SNAPSHOT</addon.exo.ecms.version>
+    <addon.exo.ecms.version>6.3.x-SNAPSHOT</addon.exo.ecms.version>
   </properties>
 
   <dependencyManagement>
